@@ -7,6 +7,7 @@ def initialize(name)
   @name=name
   @songs = []
 end
+
 def self.create(name)
 genre=new(name)
 genre.save
