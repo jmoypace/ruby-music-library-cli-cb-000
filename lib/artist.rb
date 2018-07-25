@@ -8,18 +8,6 @@ def initialize(name)
   @songs=[]
 end
 
-def self.destroy_all
-  @@all.clear
-end
-
-def self.all
-@@all
-end
-
-def save
-self.class.all<<self
-end
-
 def self.create(name)
 artist=new(name)
 artist.save
@@ -34,5 +22,19 @@ end
 def genres
     songs.collect{ |s| s.genre }.uniq
 end
+
+def self.destroy_all
+  @@all.clear
+end
+
+def self.all
+@@all
+end
+
+def save
+self.class.all<<self
+end
+
+
 
 end
