@@ -17,6 +17,10 @@ end
 def artists
     songs.collect{ |s| s.artist }.uniq
 end
+
+def save
+self.class.all<<self
+end
 def self.destroy_all
   @@all.clear
 end
@@ -24,9 +28,7 @@ def self.all
 
 @@all
 end
-def save
-self.class.all<<self
-end
+
 
 
 end
